@@ -83,7 +83,8 @@ logger.info("🚀 Supabase client initialized");
 // Konfigurasi Mayar.id
 const MAYAR_API_KEY = process.env.MAYAR_API_KEY;
 const MAYAR_BASE_URL = 'https://api.mayar.id/ks/v1';
-const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:3000';
+const FRONTEND_URL = process.env.FRONTEND_URL || 'https://frontend-corease-oy3r-dio-ferdi-jayas-projects.vercel.app';
+const BACKEND_URL = process.env.BACKEND_URL || 'https://backend-courease-production.up.railway.app';
 
 // ===== Middleware Admin =====
 const adminMiddleware = (req, res, next) => {
@@ -255,7 +256,7 @@ app.post("/payment/create", async (req, res) => {
         email: user_email
       },
       return_url: `${FRONTEND_URL}/payment/success?booking_id=${booking_id}`,
-      callback_url: `${process.env.BACKEND_URL || 'http://localhost:5000'}/payment/callback`,
+      callback_url: `${BACKEND_URL}/payment/callback`,
       metadata: {
         booking_id: booking_id.toString()
       }
