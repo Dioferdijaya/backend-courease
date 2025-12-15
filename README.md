@@ -99,6 +99,23 @@ Server akan berjalan di `http://localhost:3000`
 
 ### CORS Error
 - Set `FRONTEND_URL` dengan URL frontend yang benar
+- Jika deploy di Vercel, pastikan URL Vercel sudah ditambahkan di array `allowedOrigins` di server.js (line ~20)
+- Edit `allowedOrigins` array dan ganti `'https://your-vercel-app.vercel.app'` dengan URL Vercel Anda yang sebenarnya
+
+### Cara Setup CORS untuk Vercel
+1. Buka [server.js](server.js) line 20-24
+2. Ganti `'https://your-vercel-app.vercel.app'` dengan URL Vercel frontend Anda
+3. Commit dan push ke GitHub
+4. Railway akan auto-deploy
+
+**Contoh:**
+```javascript
+const allowedOrigins = [
+  'http://localhost:3000',
+  'https://courease-frontend.vercel.app', // URL Vercel Anda
+  process.env.FRONTEND_URL
+].filter(Boolean);
+```
 
 ## License
 
