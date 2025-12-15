@@ -20,7 +20,7 @@ const server = http.createServer(app);
 const allowedOrigins = [
   'http://localhost:3000',
   'http://localhost:5173',
-  'https://your-vercel-app.vercel.app', // Ganti dengan URL Vercel Anda
+  'https://frontend-corease-oy3r-dio-ferdi-jayas-projects.vercel.app',
   process.env.FRONTEND_URL
 ].filter(Boolean);
 
