@@ -1,0 +1,2 @@
+2025-12-10 20:16:02 [ERROR]: GET /fields 500 {"service":"coursease-backend","environment":"development","method":"GET","url":"/fields","statusCode":500,"duration":"10692ms","requestId":"u17bcj"}
+2025-12-10 20:26:07 [ERROR]: GET /fields 500 {"service":"coursease-backend","environment":"development","method":"GET","url":"/fields","statusCode":500,"duration":"71937ms","requestId":"s5utj"}
